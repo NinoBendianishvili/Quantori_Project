@@ -4,19 +4,14 @@ from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.exc import IntegrityError
 import json
 
-# Database connection configuration
 DATABASE_URI = 'postgresql+psycopg2://nbendianishvili:c56f257b@de-database.ccpquxzb7z8t.us-east-2.rds.amazonaws.com/postgres'
 
-# Create a new database engine instance
 engine = create_engine(DATABASE_URI)
 
-# Initialize metadata
 metadata = MetaData()
 
-# Reflect the existing molecule table
 molecule_table = Table('molecule', metadata, autoload_with=engine)
 
-# Define the new molecule_structures table
 molecule_structures_table = Table(
     'molecule_structures', metadata,
     Column('molecule_chembl_id', String, ForeignKey('molecule.molecule_chembl_id'), primary_key=True),
@@ -26,7 +21,6 @@ molecule_structures_table = Table(
     Column('standard_inchi_key', String)
 )
 
-# Define the new molecule_properties table
 molecule_properties_table = Table(
     'molecule_properties', metadata,
     Column('molecule_chembl_id', String, ForeignKey('molecule.molecule_chembl_id'), primary_key=True),
@@ -55,14 +49,12 @@ molecule_properties_table = Table(
     Column('rtb', Integer)
 )
 
-# Create the tables if they don't exist
 inspector = inspect(engine)
 if not inspector.has_table('molecule_structures'):
     molecule_structures_table.create(engine)
 if not inspector.has_table('molecule_properties'):
     molecule_properties_table.create(engine)
 
-# Create a session
 Session = sessionmaker(bind=engine)
 
 def upsert_data(session, table, batch):
@@ -78,7 +70,6 @@ def extract_and_insert_data(batch_size=1000):
     try:
         offset = 0
         while True:
-            # Query the molecule table in batches
             query = session.query(molecule_table.c.molecule_chembl_id, 
                                   molecule_table.c.molecule_structures,
                                   molecule_table.c.molecule_properties)\
