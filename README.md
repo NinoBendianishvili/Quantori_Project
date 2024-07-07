@@ -83,7 +83,9 @@ Analysis Views
 Several database views were created to analyze the similarity scores and molecular properties:
 
 1. Average Similarity Score per Source Molecule: This view calculated the average similarity score for each source molecule.
-2. Average Deviation of `alogp`: This view computed the average deviation of `alogp` values of similar molecules from the source molecule.
+   ![image](https://github.com/NinoBendianishvili/Quantori_Project/assets/102155590/9818188d-9816-4bd7-9540-06f17af01f94)
+
+3. Average Deviation of `alogp`: This view computed the average deviation of `alogp` values of similar molecules from the source molecule.
 
 Challenges and Solutions
 
