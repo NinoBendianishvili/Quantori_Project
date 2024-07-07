@@ -9,7 +9,6 @@ from rdkit import Chem
 from rdkit.Chem import AllChem
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-# Configuration
 S3_BUCKET_NAME = "de-school-2024-aws"
 S3_INPUT_PREFIX = "final_task/input_files/"
 S3_CHEMBL_PREFIX = "final_task/bendianishvili_nino/chembl-fingerprints/"
@@ -18,13 +17,10 @@ AWS_REGION = "us-east-2"
 FINGERPRINT_RADIUS = 2
 FINGERPRINT_NBITS = 2048
 
-# AWS Credentials
 AWS_ACCESS_KEY_ID = 'hiding not to violate'
 AWS_SECRET_ACCESS_KEY = 'hiding not to violate'
 AWS_SESSION_TOKEN = 'hiding not to violate'
 
-
-# Initialize S3 client
 session = boto3.Session(
     aws_access_key_id=AWS_ACCESS_KEY_ID,
     aws_secret_access_key=AWS_SECRET_ACCESS_KEY,
