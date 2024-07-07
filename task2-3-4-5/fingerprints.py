@@ -10,7 +10,6 @@ import multiprocessing as mp
 from functools import partial
 import pickle
 
-# Configuration
 DATABASE_CONFIG = {
     'dbname': 'postgres',
     'user': 'nbendianishvili',
@@ -90,7 +89,6 @@ def main():
         s3_key = f"{S3_FOLDER_NAME}morgan_fingerprints_chunk_{chunk_number}.parquet"
         upload_to_s3(fingerprints_file_path, S3_BUCKET_NAME, s3_key)
         
-        # Clean up the temporary file
         os.remove(fingerprints_file_path)
 
         chunk_number += 1
