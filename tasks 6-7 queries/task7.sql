@@ -1,8 +1,7 @@
--- A
 CREATE VIEW mol_similarity_averages AS (
     SELECT 
         source_chembl_id AS origin_molecule_id,
-        ROUND(AVG(tanimoto_similarity), 4) AS mean_similarity
+        ROUND(AVG(tanimoto_similarity)::numeric, 4) AS mean_similarity
     FROM 
         molecule_similarities
     GROUP BY 
