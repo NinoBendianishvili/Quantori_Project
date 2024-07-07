@@ -70,6 +70,8 @@ Dimension Table - A dimension table was created to store molecules and their pro
 The table included the following fields: `chembl_id`, `molecule_type`, `mw_freebase`, `alogp`, `psa`, 
 `cx_logp`, `molecular_species`, `full_mwt`, `aromatic_rings`, and `heavy_atoms`. 
 Only molecules referred to by the fact tables were included in this table.
+![image](https://github.com/NinoBendianishvili/Quantori_Project/assets/102155590/0b07695e-55e9-4ac8-8f15-86e011832290)
+![image](https://github.com/NinoBendianishvili/Quantori_Project/assets/102155590/dc39aef4-6f8c-4b7d-a285-a7ef5c31d8b7)
 
 Fact Table - A fact table was designed to store molecule similarities. The table included the following fields: 
 `source_molecule_ref`, `target_molecule_ref`, `tanimoto_similarity_score`, and `has_duplicates_of_last_largest_score`. 
