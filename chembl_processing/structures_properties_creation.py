@@ -4,7 +4,7 @@ from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.exc import IntegrityError
 import json
 
-DATABASE_URI = 'postgresql+psycopg2://nbendianishvili:c56f257b@de-database.ccpquxzb7z8t.us-east-2.rds.amazonaws.com/postgres'
+DATABASE_URI = 'hidden'
 
 engine = create_engine(DATABASE_URI)
 
