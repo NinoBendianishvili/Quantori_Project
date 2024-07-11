@@ -13,8 +13,8 @@ import pickle
 DATABASE_CONFIG = {
     'dbname': 'postgres',
     'user': 'nbendianishvili',
-    'password': 'c56f257b',
-    'host': 'de-database.ccpquxzb7z8t.us-east-2.rds.amazonaws.com',
+    'password': 'hidden',
+    'host': 'hidden',
     'port': '5432'
 }
 S3_BUCKET_NAME = "de-school-2024-aws"
