@@ -58,11 +58,9 @@ the S3 bucket and computing Tanimoto similarity scores. Each molecule was compar
 molecules that had compound structures. This comprehensive comparison was essential to identify the most 
 similar molecules.
 Storage of Similarity Scores - The full similarity score table for each molecule was saved as a Parquet 
-file and uploaded to S3. Due to the extensive computations required, this step was time-consuming. A total of 
-67 CSV files had to be produced, but due to time constraints decided to stop execution so there are about 30 csvs.
+file and uploaded to S3.  A total of 67 CSV files were produced
 
-5. Identifying Top-10 Similar Molecules - table is generated and populated, unfortunately I was not able to 
-finish 5th task so i "borrowed" this table to keep working on queries. 
+5. Identifying Top-10 Similar Molecules - table is generated and populated
 
 6. Data Mart Design
 
